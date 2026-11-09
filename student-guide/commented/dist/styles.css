@@ -1,0 +1,1466 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap'); /* Load the DM Sans web font from Google Fonts. */
+:root{ /* Start styling elements matched by :root. */
+  font-family:'DM Sans',Arial,sans-serif; /* Set font-family to 'DM Sans',Arial,sans-serif for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  background:#000; /* Set background to #000 for the current selector. */
+  font-synthesis:none /* Set font-synthesis to none for the current selector. */
+} /* Close the current CSS rule or media query. */
+*{ /* Start styling elements matched by *. */
+  box-sizing:border-box /* Set box-sizing to border-box for the current selector. */
+} /* Close the current CSS rule or media query. */
+body{ /* Start styling elements matched by body. */
+  margin:0; /* Set margin to 0 for the current selector. */
+  min-width:320px /* Set min-width to 320px for the current selector. */
+} /* Close the current CSS rule or media query. */
+button,input{ /* Start styling elements matched by button,input. */
+  font:inherit /* Set font to inherit for the current selector. */
+} /* Close the current CSS rule or media query. */
+button{ /* Start styling elements matched by button. */
+  cursor:pointer /* Set cursor to pointer for the current selector. */
+} /* Close the current CSS rule or media query. */
+button:focus-visible,input:focus-visible{ /* Start styling elements matched by button:focus-visible,input:focus-visible. */
+  outline:2px solid #1ed760; /* Set outline to 2px solid #1ed760 for the current selector. */
+  outline-offset:2px /* Set outline-offset to 2px for the current selector. */
+} /* Close the current CSS rule or media query. */
+[hidden]{ /* Start styling elements matched by [hidden]. */
+  display:none!important /* Set display to none!important for the current selector. */
+} /* Close the current CSS rule or media query. */
+svg{ /* Start styling elements matched by svg. */
+  width:20px; /* Set width to 20px for the current selector. */
+  height:20px; /* Set height to 20px for the current selector. */
+  fill:none; /* Set fill to none for the current selector. */
+  stroke:currentColor; /* Set stroke to currentColor for the current selector. */
+  stroke-width:1.8; /* Set stroke-width to 1.8 for the current selector. */
+  stroke-linecap:round; /* Set stroke-linecap to round for the current selector. */
+  stroke-linejoin:round /* Set stroke-linejoin to round for the current selector. */
+} /* Close the current CSS rule or media query. */
+.icon-library{ /* Start styling elements matched by .icon-library. */
+  position:absolute; /* Set position to absolute for the current selector. */
+  width:0; /* Set width to 0 for the current selector. */
+  height:0; /* Set height to 0 for the current selector. */
+  overflow:hidden /* Set overflow to hidden for the current selector. */
+} /* Close the current CSS rule or media query. */
+.panel{ /* Start styling elements matched by .panel. */
+  background:#121212; /* Set background to #121212 for the current selector. */
+  border-radius:8px /* Set border-radius to 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.app-shell{ /* Start styling elements matched by .app-shell. */
+  height:calc(100vh - 88px); /* Set height to calc(100vh - 88px) for the current selector. */
+  padding:8px; /* Set padding to 8px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  grid-template-columns:278px minmax(0,1fr) 280px; /* Set grid-template-columns to 278px minmax(0,1fr) 280px for the current selector. */
+  gap:8px; /* Set gap to 8px for the current selector. */
+  overflow:hidden /* Set overflow to hidden for the current selector. */
+} /* Close the current CSS rule or media query. */
+.left-column{ /* Start styling elements matched by .left-column. */
+  display:flex; /* Set display to flex for the current selector. */
+  flex-direction:column; /* Set flex-direction to column for the current selector. */
+  gap:8px; /* Set gap to 8px for the current selector. */
+  min-height:0 /* Set min-height to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.nav-panel{ /* Start styling elements matched by .nav-panel. */
+  padding:23px 12px 14px /* Set padding to 23px 12px 14px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand{ /* Start styling elements matched by .brand. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:8px; /* Set gap to 8px for the current selector. */
+  padding:0 12px; /* Set padding to 0 12px for the current selector. */
+  margin-bottom:18px; /* Set margin-bottom to 18px for the current selector. */
+  text-decoration:none; /* Set text-decoration to none for the current selector. */
+  color:white; /* Set color to white for the current selector. */
+  font-size:22px; /* Set font-size to 22px for the current selector. */
+  letter-spacing:-1.1px /* Set letter-spacing to -1.1px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand strong{ /* Start styling elements matched by .brand strong. */
+  font-weight:800 /* Set font-weight to 800 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand small{ /* Start styling elements matched by .brand small. */
+  font-size:7px; /* Set font-size to 7px for the current selector. */
+  letter-spacing:1px; /* Set letter-spacing to 1px for the current selector. */
+  border:1px solid #777; /* Set border to 1px solid #777 for the current selector. */
+  border-radius:3px; /* Set border-radius to 3px for the current selector. */
+  padding:2px 3px; /* Set padding to 2px 3px for the current selector. */
+  margin-left:-4px; /* Set margin-left to -4px for the current selector. */
+  align-self:start; /* Set align-self to start for the current selector. */
+  margin-top:5px /* Set margin-top to 5px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand-mark{ /* Start styling elements matched by .brand-mark. */
+  width:29px; /* Set width to 29px for the current selector. */
+  height:29px; /* Set height to 29px for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  background:#fff; /* Set background to #fff for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  flex-direction:column; /* Set flex-direction to column for the current selector. */
+  justify-content:center; /* Set justify-content to center for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:3px; /* Set gap to 3px for the current selector. */
+  transform:rotate(13deg); /* Set transform to rotate(13deg) for the current selector. */
+  flex:none /* Set flex to none for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand-mark span{ /* Start styling elements matched by .brand-mark span. */
+  width:19px; /* Set width to 19px for the current selector. */
+  height:2px; /* Set height to 2px for the current selector. */
+  background:#111; /* Set background to #111 for the current selector. */
+  border-radius:50% /* Set border-radius to 50% for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand-mark span:nth-child(2){ /* Start styling elements matched by .brand-mark span:nth-child(2). */
+  width:17px /* Set width to 17px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.brand-mark span:nth-child(3){ /* Start styling elements matched by .brand-mark span:nth-child(3). */
+  width:13px /* Set width to 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.primary-nav{ /* Start styling elements matched by .primary-nav. */
+  display:grid; /* Set display to grid for the current selector. */
+  gap:4px /* Set gap to 4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.nav-link{ /* Start styling elements matched by .nav-link. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:17px; /* Set gap to 17px for the current selector. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:transparent; /* Set background to transparent for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-weight:800; /* Set font-weight to 800 for the current selector. */
+  font-size:14px; /* Set font-size to 14px for the current selector. */
+  text-align:left; /* Set text-align to left for the current selector. */
+  height:42px; /* Set height to 42px for the current selector. */
+  width:100%; /* Set width to 100% for the current selector. */
+  padding:0 12px /* Set padding to 0 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.nav-link:hover,.nav-link.active{ /* Start styling elements matched by .nav-link:hover,.nav-link.active. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.nav-link svg{ /* Start styling elements matched by .nav-link svg. */
+  width:23px; /* Set width to 23px for the current selector. */
+  height:23px; /* Set height to 23px for the current selector. */
+  stroke-width:2.4 /* Set stroke-width to 2.4 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-panel{ /* Start styling elements matched by .library-panel. */
+  flex:1; /* Set flex to 1 for the current selector. */
+  min-height:0; /* Set min-height to 0 for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  flex-direction:column; /* Set flex-direction to column for the current selector. */
+  padding:12px 8px 10px /* Set padding to 12px 8px 10px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-heading{ /* Start styling elements matched by .library-heading. */
+  display:flex; /* Set display to flex for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  padding:0 7px 9px 4px /* Set padding to 0 7px 9px 4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-title{ /* Start styling elements matched by .library-title. */
+  width:auto; /* Set width to auto for the current selector. */
+  height:37px /* Set height to 37px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.plus-button{ /* Start styling elements matched by .plus-button. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-size:30px; /* Set font-size to 30px for the current selector. */
+  line-height:1; /* Set line-height to 1 for the current selector. */
+  padding:0 6px /* Set padding to 0 6px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.plus-button:hover{ /* Start styling elements matched by .plus-button:hover. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-filters{ /* Start styling elements matched by .library-filters. */
+  display:flex; /* Set display to flex for the current selector. */
+  gap:7px; /* Set gap to 7px for the current selector. */
+  padding:0 10px 13px /* Set padding to 0 10px 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-chip{ /* Start styling elements matched by .library-chip. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:#232323; /* Set background to #232323 for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  font-size:12px; /* Set font-size to 12px for the current selector. */
+  border-radius:20px; /* Set border-radius to 20px for the current selector. */
+  padding:7px 13px /* Set padding to 7px 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-chip:hover,.library-chip.active{ /* Start styling elements matched by .library-chip:hover,.library-chip.active. */
+  background:#333 /* Set background to #333 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-search-line{ /* Start styling elements matched by .library-search-line. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  padding:4px 13px 12px; /* Set padding to 4px 13px 12px for the current selector. */
+  font-size:11px /* Set font-size to 11px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-search-line svg{ /* Start styling elements matched by .library-search-line svg. */
+  width:17px; /* Set width to 17px for the current selector. */
+  height:17px /* Set height to 17px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-nav{ /* Start styling elements matched by .playlist-nav. */
+  display:grid; /* Set display to grid for the current selector. */
+  gap:2px; /* Set gap to 2px for the current selector. */
+  overflow-y:auto; /* Set overflow-y to auto for the current selector. */
+  align-content:start /* Set align-content to start for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-item{ /* Start styling elements matched by .playlist-item. */
+  background:transparent; /* Set background to transparent for the current selector. */
+  border:0; /* Set border to 0 for the current selector. */
+  border-radius:4px; /* Set border-radius to 4px for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  width:100%; /* Set width to 100% for the current selector. */
+  padding:7px; /* Set padding to 7px for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:11px; /* Set gap to 11px for the current selector. */
+  text-align:left; /* Set text-align to left for the current selector. */
+  min-width:0 /* Set min-width to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-item:hover,.playlist-item.selected{ /* Start styling elements matched by .playlist-item:hover,.playlist-item.selected. */
+  background:#232323 /* Set background to #232323 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-item>span:last-child{ /* Start styling elements matched by .playlist-item>span:last-child. */
+  min-width:0 /* Set min-width to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-item strong,.playlist-item small{ /* Start styling elements matched by .playlist-item strong,.playlist-item small. */
+  display:block; /* Set display to block for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  text-overflow:ellipsis; /* Set text-overflow to ellipsis for the current selector. */
+  white-space:nowrap /* Set white-space to nowrap for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-item strong{ /* Start styling elements matched by .playlist-item strong. */
+  font-size:13px; /* Set font-size to 13px for the current selector. */
+  font-weight:700 /* Set font-weight to 700 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-item small{ /* Start styling elements matched by .playlist-item small. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  margin-top:4px /* Set margin-top to 4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.playlist-cover,.quick-cover{ /* Start styling elements matched by .playlist-cover,.quick-cover. */
+  width:48px; /* Set width to 48px for the current selector. */
+  height:48px; /* Set height to 48px for the current selector. */
+  border-radius:4px; /* Set border-radius to 4px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  flex:none; /* Set flex to none for the current selector. */
+  font-size:28px; /* Set font-size to 28px for the current selector. */
+  font-weight:700; /* Set font-weight to 700 for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  box-shadow:0 2px 7px #0005 /* Set box-shadow to 0 2px 7px #0005 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.liked-cover{ /* Start styling elements matched by .liked-cover. */
+  background:linear-gradient(135deg,#44269d,#9189c8); /* Set background to linear-gradient(135deg,#44269d,#9189c8) for the current selector. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.liked-cover svg{ /* Start styling elements matched by .liked-cover svg. */
+  fill:currentColor; /* Set fill to currentColor for the current selector. */
+  stroke:currentColor; /* Set stroke to currentColor for the current selector. */
+  width:22px; /* Set width to 22px for the current selector. */
+  height:22px /* Set height to 22px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.local-cover{ /* Start styling elements matched by .local-cover. */
+  background:#333; /* Set background to #333 for the current selector. */
+  color:#b3b3b3 /* Set color to #b3b3b3 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-help{ /* Start styling elements matched by .library-help. */
+  margin:auto 7px 0; /* Set margin to auto 7px 0 for the current selector. */
+  padding:15px 12px; /* Set padding to 15px 12px for the current selector. */
+  background:#242424; /* Set background to #242424 for the current selector. */
+  border-radius:8px /* Set border-radius to 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-help p{ /* Start styling elements matched by .library-help p. */
+  font-size:12px; /* Set font-size to 12px for the current selector. */
+  font-weight:700; /* Set font-weight to 700 for the current selector. */
+  margin:0 0 12px /* Set margin to 0 0 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-help button{ /* Start styling elements matched by .library-help button. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:#fff; /* Set background to #fff for the current selector. */
+  color:#111; /* Set color to #111 for the current selector. */
+  border-radius:20px; /* Set border-radius to 20px for the current selector. */
+  padding:7px 12px; /* Set padding to 7px 12px for the current selector. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  font-weight:800; /* Set font-weight to 800 for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:7px /* Set gap to 7px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-help button:hover{ /* Start styling elements matched by .library-help button:hover. */
+  transform:scale(1.03) /* Set transform to scale(1.03) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.library-help button svg{ /* Start styling elements matched by .library-help button svg. */
+  width:13px; /* Set width to 13px for the current selector. */
+  height:13px /* Set height to 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.main-content{ /* Start styling elements matched by .main-content. */
+  min-width:0; /* Set min-width to 0 for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  background:linear-gradient(#304b3b 0,#242d27 210px,#1a1a1a 390px,#121212 530px); /* Set background to linear-gradient(#304b3b 0,#242d27 210px,#1a1a1a 390px,#121212 530px) for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  flex-direction:column /* Set flex-direction to column for the current selector. */
+} /* Close the current CSS rule or media query. */
+.topbar{ /* Start styling elements matched by .topbar. */
+  height:64px; /* Set height to 64px for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  padding:0 24px; /* Set padding to 0 24px for the current selector. */
+  flex:none; /* Set flex to none for the current selector. */
+  gap:12px /* Set gap to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.history-buttons{ /* Start styling elements matched by .history-buttons. */
+  display:flex; /* Set display to flex for the current selector. */
+  gap:8px /* Set gap to 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.history-buttons button,.avatar{ /* Start styling elements matched by .history-buttons button,.avatar. */
+  width:32px; /* Set width to 32px for the current selector. */
+  height:32px; /* Set height to 32px for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  border:0; /* Set border to 0 for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  background:#0009; /* Set background to #0009 for the current selector. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.history-buttons button:nth-child(2) svg{ /* Start styling elements matched by .history-buttons button:nth-child(2) svg. */
+  transform:rotate(180deg) /* Set transform to rotate(180deg) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.history-buttons button:disabled{ /* Start styling elements matched by .history-buttons button:disabled. */
+  cursor:not-allowed; /* Set cursor to not-allowed for the current selector. */
+  opacity:.35 /* Set opacity to .35 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.history-buttons svg{ /* Start styling elements matched by .history-buttons svg. */
+  width:16px; /* Set width to 16px for the current selector. */
+  height:16px /* Set height to 16px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.topbar-actions{ /* Start styling elements matched by .topbar-actions. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:12px /* Set gap to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.top-search{ /* Start styling elements matched by .top-search. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:8px; /* Set gap to 8px for the current selector. */
+  border:0; /* Set border to 0 for the current selector. */
+  border-radius:25px; /* Set border-radius to 25px for the current selector. */
+  background:#242b26; /* Set background to #242b26 for the current selector. */
+  color:#b3b3b3; /* Set color to #b3b3b3 for the current selector. */
+  padding:8px 14px; /* Set padding to 8px 14px for the current selector. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  min-width:180px; /* Set min-width to 180px for the current selector. */
+  text-align:left /* Set text-align to left for the current selector. */
+} /* Close the current CSS rule or media query. */
+.top-search:hover{ /* Start styling elements matched by .top-search:hover. */
+  background:#303a33; /* Set background to #303a33 for the current selector. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.top-search svg{ /* Start styling elements matched by .top-search svg. */
+  width:15px; /* Set width to 15px for the current selector. */
+  height:15px /* Set height to 15px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.app-badge{ /* Start styling elements matched by .app-badge. */
+  background:#0b0d0b; /* Set background to #0b0d0b for the current selector. */
+  color:#ddd; /* Set color to #ddd for the current selector. */
+  border:1px solid #ffffff19; /* Set border to 1px solid #ffffff19 for the current selector. */
+  border-radius:16px; /* Set border-radius to 16px for the current selector. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  font-weight:700; /* Set font-weight to 700 for the current selector. */
+  letter-spacing:.4px; /* Set letter-spacing to .4px for the current selector. */
+  padding:8px 11px; /* Set padding to 8px 11px for the current selector. */
+  white-space:nowrap /* Set white-space to nowrap for the current selector. */
+} /* Close the current CSS rule or media query. */
+.avatar{ /* Start styling elements matched by .avatar. */
+  background:#c46e42; /* Set background to #c46e42 for the current selector. */
+  color:#1b100a; /* Set color to #1b100a for the current selector. */
+  font-size:13px; /* Set font-size to 13px for the current selector. */
+  font-weight:800; /* Set font-weight to 800 for the current selector. */
+  border:5px solid #080808; /* Set border to 5px solid #080808 for the current selector. */
+  width:39px; /* Set width to 39px for the current selector. */
+  height:39px /* Set height to 39px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.main-scroll{ /* Start styling elements matched by .main-scroll. */
+  overflow:auto; /* Set overflow to auto for the current selector. */
+  padding:0 24px 26px; /* Set padding to 0 24px 26px for the current selector. */
+  scrollbar-color:#555 transparent; /* Set scrollbar-color to #555 transparent for the current selector. */
+  scrollbar-width:thin /* Set scrollbar-width to thin for the current selector. */
+} /* Close the current CSS rule or media query. */
+.home-top{ /* Start styling elements matched by .home-top. */
+  padding-top:7px /* Set padding-top to 7px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.welcome-line{ /* Start styling elements matched by .welcome-line. */
+  display:flex; /* Set display to flex for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:10px /* Set gap to 10px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.welcome-line h1{ /* Start styling elements matched by .welcome-line h1. */
+  font-size:29px; /* Set font-size to 29px for the current selector. */
+  letter-spacing:-.7px; /* Set letter-spacing to -.7px for the current selector. */
+  margin:4px 0 21px; /* Set margin to 4px 0 21px for the current selector. */
+  font-weight:800 /* Set font-weight to 800 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.welcome-line span{ /* Start styling elements matched by .welcome-line span. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  color:#ddd /* Set color to #ddd for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-grid{ /* Start styling elements matched by .quick-grid. */
+  display:grid; /* Set display to grid for the current selector. */
+  grid-template-columns:repeat(3,minmax(0,1fr)); /* Set grid-template-columns to repeat(3,minmax(0,1fr)) for the current selector. */
+  gap:9px; /* Set gap to 9px for the current selector. */
+  margin-bottom:35px /* Set margin-bottom to 35px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-tile{ /* Start styling elements matched by .quick-tile. */
+  height:64px; /* Set height to 64px for the current selector. */
+  border:0; /* Set border to 0 for the current selector. */
+  border-radius:4px; /* Set border-radius to 4px for the current selector. */
+  background:#ffffff26; /* Set background to #ffffff26 for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:12px; /* Set gap to 12px for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  position:relative; /* Set position to relative for the current selector. */
+  text-align:left; /* Set text-align to left for the current selector. */
+  padding:0; /* Set padding to 0 for the current selector. */
+  transition:background .16s /* Set transition to background .16s for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-tile:hover{ /* Start styling elements matched by .quick-tile:hover. */
+  background:#ffffff45 /* Set background to #ffffff45 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-tile strong{ /* Start styling elements matched by .quick-tile strong. */
+  font-size:12px; /* Set font-size to 12px for the current selector. */
+  line-height:1.2; /* Set line-height to 1.2 for the current selector. */
+  padding-right:8px /* Set padding-right to 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-cover{ /* Start styling elements matched by .quick-cover. */
+  width:64px; /* Set width to 64px for the current selector. */
+  height:64px; /* Set height to 64px for the current selector. */
+  border-radius:0; /* Set border-radius to 0 for the current selector. */
+  font-size:33px; /* Set font-size to 33px for the current selector. */
+  box-shadow:4px 0 15px #0004 /* Set box-shadow to 4px 0 15px #0004 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-play,.card-play{ /* Start styling elements matched by .quick-play,.card-play. */
+  background:#1ed760; /* Set background to #1ed760 for the current selector. */
+  color:#000; /* Set color to #000 for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  width:38px; /* Set width to 38px for the current selector. */
+  height:38px; /* Set height to 38px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  position:absolute; /* Set position to absolute for the current selector. */
+  right:10px; /* Set right to 10px for the current selector. */
+  bottom:12px; /* Set bottom to 12px for the current selector. */
+  box-shadow:0 8px 16px #0008; /* Set box-shadow to 0 8px 16px #0008 for the current selector. */
+  opacity:0; /* Set opacity to 0 for the current selector. */
+  transform:translateY(6px); /* Set transform to translateY(6px) for the current selector. */
+  transition:.18s /* Set transition to .18s for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-tile:hover .quick-play,.featured-card:hover .card-play{ /* Start styling elements matched by .quick-tile:hover .quick-play,.featured-card:hover .card-play. */
+  opacity:1; /* Set opacity to 1 for the current selector. */
+  transform:none /* Set transform to none for the current selector. */
+} /* Close the current CSS rule or media query. */
+.quick-play svg,.card-play svg{ /* Start styling elements matched by .quick-play svg,.card-play svg. */
+  fill:currentColor; /* Set fill to currentColor for the current selector. */
+  width:18px; /* Set width to 18px for the current selector. */
+  height:18px; /* Set height to 18px for the current selector. */
+  margin-left:2px /* Set margin-left to 2px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.section-block{ /* Start styling elements matched by .section-block. */
+  margin-bottom:33px /* Set margin-bottom to 33px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.section-heading{ /* Start styling elements matched by .section-heading. */
+  display:flex; /* Set display to flex for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  align-items:end; /* Set align-items to end for the current selector. */
+  gap:12px; /* Set gap to 12px for the current selector. */
+  margin-bottom:13px /* Set margin-bottom to 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.section-heading h2{ /* Start styling elements matched by .section-heading h2. */
+  font-size:21px; /* Set font-size to 21px for the current selector. */
+  letter-spacing:-.4px; /* Set letter-spacing to -.4px for the current selector. */
+  margin:0; /* Set margin to 0 for the current selector. */
+  font-weight:800 /* Set font-weight to 800 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.section-heading p{ /* Start styling elements matched by .section-heading p. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  color:#b3b3b3; /* Set color to #b3b3b3 for the current selector. */
+  margin:5px 0 0 /* Set margin to 5px 0 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.show-all{ /* Start styling elements matched by .show-all. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  color:#b3b3b3; /* Set color to #b3b3b3 for the current selector. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  font-weight:800; /* Set font-weight to 800 for the current selector. */
+  white-space:nowrap /* Set white-space to nowrap for the current selector. */
+} /* Close the current CSS rule or media query. */
+.show-all:hover{ /* Start styling elements matched by .show-all:hover. */
+  text-decoration:underline; /* Set text-decoration to underline for the current selector. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.featured-grid{ /* Start styling elements matched by .featured-grid. */
+  display:grid; /* Set display to grid for the current selector. */
+  grid-template-columns:repeat(4,minmax(0,1fr)); /* Set grid-template-columns to repeat(4,minmax(0,1fr)) for the current selector. */
+  gap:8px /* Set gap to 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.featured-card{ /* Start styling elements matched by .featured-card. */
+  border:0; /* Set border to 0 for the current selector. */
+  border-radius:6px; /* Set border-radius to 6px for the current selector. */
+  background:#181818; /* Set background to #181818 for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  text-align:left; /* Set text-align to left for the current selector. */
+  padding:12px; /* Set padding to 12px for the current selector. */
+  min-width:0; /* Set min-width to 0 for the current selector. */
+  transition:background .2s /* Set transition to background .2s for the current selector. */
+} /* Close the current CSS rule or media query. */
+.featured-card:hover{ /* Start styling elements matched by .featured-card:hover. */
+  background:#282828 /* Set background to #282828 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.card-art{ /* Start styling elements matched by .card-art. */
+  width:100%; /* Set width to 100% for the current selector. */
+  aspect-ratio:1; /* Set aspect-ratio to 1 for the current selector. */
+  border-radius:4px; /* Set border-radius to 4px for the current selector. */
+  position:relative; /* Set position to relative for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  box-shadow:0 7px 17px #0006 /* Set box-shadow to 0 7px 17px #0006 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.card-art:before,.now-art:before{ /* Start styling elements matched by .card-art:before,.now-art:before. */
+  content:''; /* Set content to '' for the current selector. */
+  width:90%; /* Set width to 90% for the current selector. */
+  height:90%; /* Set height to 90% for the current selector. */
+  border:2px solid #ffffff35; /* Set border to 2px solid #ffffff35 for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  position:absolute; /* Set position to absolute for the current selector. */
+  left:5%; /* Set left to 5% for the current selector. */
+  top:5%; /* Set top to 5% for the current selector. */
+  box-shadow:0 0 0 17px #ffffff12,0 0 0 36px #ffffff12 /* Set box-shadow to 0 0 0 17px #ffffff12,0 0 0 36px #ffffff12 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.card-art:after,.now-art:after{ /* Start styling elements matched by .card-art:after,.now-art:after. */
+  content:''; /* Set content to '' for the current selector. */
+  width:60%; /* Set width to 60% for the current selector. */
+  height:60%; /* Set height to 60% for the current selector. */
+  border:1px solid #ffffff28; /* Set border to 1px solid #ffffff28 for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  position:absolute; /* Set position to absolute for the current selector. */
+  left:20%; /* Set left to 20% for the current selector. */
+  top:20% /* Set top to 20% for the current selector. */
+} /* Close the current CSS rule or media query. */
+.card-shape{ /* Start styling elements matched by .card-shape. */
+  font-size:clamp(44px,5vw,90px); /* Set font-size to clamp(44px,5vw,90px) for the current selector. */
+  line-height:1; /* Set line-height to 1 for the current selector. */
+  filter:drop-shadow(6px 8px 5px #0005); /* Set filter to drop-shadow(6px 8px 5px #0005) for the current selector. */
+  z-index:1; /* Set z-index to 1 for the current selector. */
+  transform:rotate(-13deg) /* Set transform to rotate(-13deg) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.card-play{ /* Start styling elements matched by .card-play. */
+  right:8px; /* Set right to 8px for the current selector. */
+  bottom:8px; /* Set bottom to 8px for the current selector. */
+  width:40px; /* Set width to 40px for the current selector. */
+  height:40px; /* Set height to 40px for the current selector. */
+  z-index:2 /* Set z-index to 2 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.featured-card strong,.featured-card small{ /* Start styling elements matched by .featured-card strong,.featured-card small. */
+  display:block; /* Set display to block for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  text-overflow:ellipsis; /* Set text-overflow to ellipsis for the current selector. */
+  white-space:nowrap /* Set white-space to nowrap for the current selector. */
+} /* Close the current CSS rule or media query. */
+.featured-card strong{ /* Start styling elements matched by .featured-card strong. */
+  font-size:13px; /* Set font-size to 13px for the current selector. */
+  margin:12px 0 5px /* Set margin to 12px 0 5px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.featured-card small{ /* Start styling elements matched by .featured-card small. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  color:#a7a7a7 /* Set color to #a7a7a7 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-purple{ /* Start styling elements matched by .art-purple. */
+  background:linear-gradient(135deg,#40378f,#8c51b5 55%,#d19bdb); /* Set background to linear-gradient(135deg,#40378f,#8c51b5 55%,#d19bdb) for the current selector. */
+  color:#e6c1ff /* Set color to #e6c1ff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-orange{ /* Start styling elements matched by .art-orange. */
+  background:linear-gradient(135deg,#8a311f,#df6636 52%,#ffc169); /* Set background to linear-gradient(135deg,#8a311f,#df6636 52%,#ffc169) for the current selector. */
+  color:#ffe2ac /* Set color to #ffe2ac for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-blue{ /* Start styling elements matched by .art-blue. */
+  background:linear-gradient(135deg,#12476a,#267daf 54%,#a2dded); /* Set background to linear-gradient(135deg,#12476a,#267daf 54%,#a2dded) for the current selector. */
+  color:#d5f5ff /* Set color to #d5f5ff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-pink{ /* Start styling elements matched by .art-pink. */
+  background:linear-gradient(135deg,#6c254c,#bc537e 54%,#f5adb7); /* Set background to linear-gradient(135deg,#6c254c,#bc537e 54%,#f5adb7) for the current selector. */
+  color:#fbd4dc /* Set color to #fbd4dc for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-green{ /* Start styling elements matched by .art-green. */
+  background:linear-gradient(135deg,#164b47,#529e6f 60%,#c5d983); /* Set background to linear-gradient(135deg,#164b47,#529e6f 60%,#c5d983) for the current selector. */
+  color:#e4ffd5 /* Set color to #e4ffd5 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-gold{ /* Start styling elements matched by .art-gold. */
+  background:linear-gradient(135deg,#74502d,#bd8542 55%,#eec882); /* Set background to linear-gradient(135deg,#74502d,#bd8542 55%,#eec882) for the current selector. */
+  color:#fff2c9 /* Set color to #fff2c9 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.tracks-section{ /* Start styling elements matched by .tracks-section. */
+  padding-top:4px /* Set padding-top to 4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.section-kicker{ /* Start styling elements matched by .section-kicker. */
+  display:block; /* Set display to block for the current selector. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  letter-spacing:1px; /* Set letter-spacing to 1px for the current selector. */
+  color:#b3b3b3; /* Set color to #b3b3b3 for the current selector. */
+  font-weight:800; /* Set font-weight to 800 for the current selector. */
+  margin-bottom:5px /* Set margin-bottom to 5px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.accent-period{ /* Start styling elements matched by .accent-period. */
+  color:#1ed760 /* Set color to #1ed760 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.table-wrap{ /* Start styling elements matched by .table-wrap. */
+  max-width:100% /* Set max-width to 100% for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-head,.track-row{ /* Start styling elements matched by .track-head,.track-row. */
+  display:grid; /* Set display to grid for the current selector. */
+  grid-template-columns:30px minmax(0,1fr) 105px 46px 29px; /* Set grid-template-columns to 30px minmax(0,1fr) 105px 46px 29px for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:12px /* Set gap to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-head{ /* Start styling elements matched by .track-head. */
+  height:33px; /* Set height to 33px for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  border-bottom:1px solid #ffffff2a; /* Set border-bottom to 1px solid #ffffff2a for the current selector. */
+  padding:0 12px /* Set padding to 0 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-row{ /* Start styling elements matched by .track-row. */
+  width:100%; /* Set width to 100% for the current selector. */
+  height:58px; /* Set height to 58px for the current selector. */
+  padding:0 12px; /* Set padding to 0 12px for the current selector. */
+  border:0; /* Set border to 0 for the current selector. */
+  border-radius:4px; /* Set border-radius to 4px for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  text-align:left; /* Set text-align to left for the current selector. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-row:hover,.track-row.is-playing{ /* Start styling elements matched by .track-row:hover,.track-row.is-playing. */
+  background:#ffffff19 /* Set background to #ffffff19 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-number,.genre,.track-time{ /* Start styling elements matched by .track-number,.genre,.track-time. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-size:12px /* Set font-size to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-row.is-playing .track-number,.track-row.is-playing .row-meta strong{ /* Start styling elements matched by .track-row.is-playing .track-number,.track-row.is-playing .row-meta strong. */
+  color:#1ed760 /* Set color to #1ed760 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-title-cell{ /* Start styling elements matched by .track-title-cell. */
+  display:flex; /* Set display to flex for the current selector. */
+  gap:10px; /* Set gap to 10px for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  min-width:0 /* Set min-width to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-art{ /* Start styling elements matched by .row-art. */
+  width:40px; /* Set width to 40px for the current selector. */
+  height:40px; /* Set height to 40px for the current selector. */
+  border-radius:3px; /* Set border-radius to 3px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  font-size:24px; /* Set font-size to 24px for the current selector. */
+  flex:none /* Set flex to none for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-meta{ /* Start styling elements matched by .row-meta. */
+  min-width:0 /* Set min-width to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-meta strong,.row-meta span{ /* Start styling elements matched by .row-meta strong,.row-meta span. */
+  display:block; /* Set display to block for the current selector. */
+  white-space:nowrap; /* Set white-space to nowrap for the current selector. */
+  text-overflow:ellipsis; /* Set text-overflow to ellipsis for the current selector. */
+  overflow:hidden /* Set overflow to hidden for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-meta strong{ /* Start styling elements matched by .row-meta strong. */
+  font-size:12px /* Set font-size to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-meta span{ /* Start styling elements matched by .row-meta span. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  margin-top:3px /* Set margin-top to 3px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-like{ /* Start styling elements matched by .row-like. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  padding:5px; /* Set padding to 5px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center /* Set place-items to center for the current selector. */
+} /* Close the current CSS rule or media query. */
+.row-like svg{ /* Start styling elements matched by .row-like svg. */
+  width:17px; /* Set width to 17px for the current selector. */
+  height:17px /* Set height to 17px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.liked,.row-like:hover,.like-button:hover{ /* Start styling elements matched by .liked,.row-like:hover,.like-button:hover. */
+  color:#1ed760!important /* Set color to #1ed760!important for the current selector. */
+} /* Close the current CSS rule or media query. */
+.liked svg{ /* Start styling elements matched by .liked svg. */
+  fill:#1ed760 /* Set fill to #1ed760 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.page-footer{ /* Start styling elements matched by .page-footer. */
+  border-top:1px solid #ffffff20; /* Set border-top to 1px solid #ffffff20 for the current selector. */
+  margin-top:38px; /* Set margin-top to 38px for the current selector. */
+  padding-top:20px; /* Set padding-top to 20px for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  gap:12px; /* Set gap to 12px for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-size:10px /* Set font-size to 10px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-panel{ /* Start styling elements matched by .now-panel. */
+  padding:17px; /* Set padding to 17px for the current selector. */
+  overflow-y:auto; /* Set overflow-y to auto for the current selector. */
+  scrollbar-color:#555 transparent; /* Set scrollbar-color to #555 transparent for the current selector. */
+  scrollbar-width:thin /* Set scrollbar-width to thin for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-heading{ /* Start styling elements matched by .now-heading. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  margin-bottom:18px; /* Set margin-bottom to 18px for the current selector. */
+  font-size:13px /* Set font-size to 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-heading button,.queue-heading button{ /* Start styling elements matched by .now-heading button,.queue-heading button. */
+  border:0; /* Set border to 0 for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center /* Set place-items to center for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-heading button:hover,.queue-heading button:hover{ /* Start styling elements matched by .now-heading button:hover,.queue-heading button:hover. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-heading svg{ /* Start styling elements matched by .now-heading svg. */
+  width:17px; /* Set width to 17px for the current selector. */
+  height:17px /* Set height to 17px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-art{ /* Start styling elements matched by .now-art. */
+  width:100%; /* Set width to 100% for the current selector. */
+  aspect-ratio:1; /* Set aspect-ratio to 1 for the current selector. */
+  border-radius:5px; /* Set border-radius to 5px for the current selector. */
+  position:relative; /* Set position to relative for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  box-shadow:0 6px 20px #0005 /* Set box-shadow to 0 6px 20px #0005 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-shape{ /* Start styling elements matched by .art-shape. */
+  font-size:100px; /* Set font-size to 100px for the current selector. */
+  z-index:1; /* Set z-index to 1 for the current selector. */
+  filter:drop-shadow(8px 10px 5px #0005) /* Set filter to drop-shadow(8px 10px 5px #0005) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.art-code{ /* Start styling elements matched by .art-code. */
+  position:absolute; /* Set position to absolute for the current selector. */
+  left:13px; /* Set left to 13px for the current selector. */
+  bottom:12px; /* Set bottom to 12px for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  font-size:8px; /* Set font-size to 8px for the current selector. */
+  letter-spacing:1.4px; /* Set letter-spacing to 1.4px for the current selector. */
+  z-index:2 /* Set z-index to 2 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-info{ /* Start styling elements matched by .now-info. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  margin:16px 0 23px /* Set margin to 16px 0 23px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-info h2{ /* Start styling elements matched by .now-info h2. */
+  font-size:19px; /* Set font-size to 19px for the current selector. */
+  margin:0 0 3px; /* Set margin to 0 0 3px for the current selector. */
+  letter-spacing:-.4px /* Set letter-spacing to -.4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.now-info p{ /* Start styling elements matched by .now-info p. */
+  margin:0; /* Set margin to 0 for the current selector. */
+  color:#b3b3b3; /* Set color to #b3b3b3 for the current selector. */
+  font-size:12px /* Set font-size to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.icon-button{ /* Start styling elements matched by .icon-button. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center /* Set place-items to center for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-card{ /* Start styling elements matched by .artist-card. */
+  background:linear-gradient(145deg,#3a4c42,#1b281f); /* Set background to linear-gradient(145deg,#3a4c42,#1b281f) for the current selector. */
+  border-radius:6px; /* Set border-radius to 6px for the current selector. */
+  padding:15px; /* Set padding to 15px for the current selector. */
+  min-height:135px /* Set min-height to 135px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-card>span{ /* Start styling elements matched by .artist-card>span. */
+  font-size:13px; /* Set font-size to 13px for the current selector. */
+  font-weight:800 /* Set font-weight to 800 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.track-description{ /* Start styling elements matched by .track-description. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  line-height:1.5; /* Set line-height to 1.5 for the current selector. */
+  color:#d1d8d2; /* Set color to #d1d8d2 for the current selector. */
+  margin:15px 0 12px /* Set margin to 15px 0 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-card small{ /* Start styling elements matched by .artist-card small. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  color:#afc2b3 /* Set color to #afc2b3 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.next-up{ /* Start styling elements matched by .next-up. */
+  margin-top:22px /* Set margin-top to 22px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.next-up>div{ /* Start styling elements matched by .next-up>div. */
+  display:flex; /* Set display to flex for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  gap:10px; /* Set gap to 10px for the current selector. */
+  align-items:center /* Set align-items to center for the current selector. */
+} /* Close the current CSS rule or media query. */
+.next-up strong{ /* Start styling elements matched by .next-up strong. */
+  font-size:13px /* Set font-size to 13px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.next-up button{ /* Start styling elements matched by .next-up button. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  font-weight:800 /* Set font-weight to 800 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.next-up button:hover{ /* Start styling elements matched by .next-up button:hover. */
+  text-decoration:underline; /* Set text-decoration to underline for the current selector. */
+  color:#fff /* Set color to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.next-up p{ /* Start styling elements matched by .next-up p. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  color:#b3b3b3 /* Set color to #b3b3b3 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player{ /* Start styling elements matched by .player. */
+  height:88px; /* Set height to 88px for the current selector. */
+  background:#000; /* Set background to #000 for the current selector. */
+  position:fixed; /* Set position to fixed for the current selector. */
+  left:0; /* Set left to 0 for the current selector. */
+  right:0; /* Set right to 0 for the current selector. */
+  bottom:0; /* Set bottom to 0 for the current selector. */
+  z-index:20; /* Set z-index to 20 for the current selector. */
+  padding:9px 16px; /* Set padding to 9px 16px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  grid-template-columns:minmax(180px,1fr) minmax(290px,1.2fr) minmax(175px,1fr); /* Set grid-template-columns to minmax(180px,1fr) minmax(290px,1.2fr) minmax(175px,1fr) for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:20px /* Set gap to 20px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-track{ /* Start styling elements matched by .player-track. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:11px; /* Set gap to 11px for the current selector. */
+  min-width:0 /* Set min-width to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-art{ /* Start styling elements matched by .player-art. */
+  width:56px; /* Set width to 56px for the current selector. */
+  height:56px; /* Set height to 56px for the current selector. */
+  border-radius:4px; /* Set border-radius to 4px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  font-size:30px; /* Set font-size to 30px for the current selector. */
+  flex:none /* Set flex to none for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-meta{ /* Start styling elements matched by .player-meta. */
+  min-width:0; /* Set min-width to 0 for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  flex-direction:column; /* Set flex-direction to column for the current selector. */
+  gap:4px /* Set gap to 4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-meta strong,.player-meta span{ /* Start styling elements matched by .player-meta strong,.player-meta span. */
+  overflow:hidden; /* Set overflow to hidden for the current selector. */
+  text-overflow:ellipsis; /* Set text-overflow to ellipsis for the current selector. */
+  white-space:nowrap /* Set white-space to nowrap for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-meta strong{ /* Start styling elements matched by .player-meta strong. */
+  font-size:12px /* Set font-size to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-meta span{ /* Start styling elements matched by .player-meta span. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  color:#b3b3b3 /* Set color to #b3b3b3 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-track .like-button{ /* Start styling elements matched by .player-track .like-button. */
+  margin-left:8px /* Set margin-left to 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-center{ /* Start styling elements matched by .player-center. */
+  display:flex; /* Set display to flex for the current selector. */
+  flex-direction:column; /* Set flex-direction to column for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:5px /* Set gap to 5px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-buttons{ /* Start styling elements matched by .player-buttons. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:19px /* Set gap to 19px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-small,.control-play{ /* Start styling elements matched by .control-small,.control-play. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:none; /* Set background to none for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  padding:3px; /* Set padding to 3px for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center /* Set place-items to center for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-small:hover,.control-small.active{ /* Start styling elements matched by .control-small:hover,.control-small.active. */
+  color:#1ed760 /* Set color to #1ed760 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-small.active:after{ /* Start styling elements matched by .control-small.active:after. */
+  content:''; /* Set content to '' for the current selector. */
+  width:4px; /* Set width to 4px for the current selector. */
+  height:4px; /* Set height to 4px for the current selector. */
+  background:#1ed760; /* Set background to #1ed760 for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  position:absolute; /* Set position to absolute for the current selector. */
+  transform:translateY(13px) /* Set transform to translateY(13px) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-small svg{ /* Start styling elements matched by .control-small svg. */
+  width:17px; /* Set width to 17px for the current selector. */
+  height:17px /* Set height to 17px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-play{ /* Start styling elements matched by .control-play. */
+  width:30px; /* Set width to 30px for the current selector. */
+  height:30px; /* Set height to 30px for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  background:#fff; /* Set background to #fff for the current selector. */
+  color:#000 /* Set color to #000 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-play:hover{ /* Start styling elements matched by .control-play:hover. */
+  transform:scale(1.07) /* Set transform to scale(1.07) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.control-play svg{ /* Start styling elements matched by .control-play svg. */
+  width:17px; /* Set width to 17px for the current selector. */
+  height:17px; /* Set height to 17px for the current selector. */
+  fill:currentColor /* Set fill to currentColor for the current selector. */
+} /* Close the current CSS rule or media query. */
+.timeline{ /* Start styling elements matched by .timeline. */
+  width:100%; /* Set width to 100% for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:9px; /* Set gap to 9px for the current selector. */
+  color:#a7a7a7; /* Set color to #a7a7a7 for the current selector. */
+  font-size:10px /* Set font-size to 10px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.timeline input{ /* Start styling elements matched by .timeline input. */
+  flex:1 /* Set flex to 1 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-extras{ /* Start styling elements matched by .player-extras. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  justify-content:flex-end; /* Set justify-content to flex-end for the current selector. */
+  gap:12px /* Set gap to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-extras .volume-icon{ /* Start styling elements matched by .player-extras .volume-icon. */
+  width:18px; /* Set width to 18px for the current selector. */
+  color:#a7a7a7 /* Set color to #a7a7a7 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.player-extras input{ /* Start styling elements matched by .player-extras input. */
+  width:90px /* Set width to 90px for the current selector. */
+} /* Close the current CSS rule or media query. */
+input[type=range]{ /* Start styling elements matched by input[type=range]. */
+  appearance:none; /* Set appearance to none for the current selector. */
+  height:4px; /* Set height to 4px for the current selector. */
+  background:#535353; /* Set background to #535353 for the current selector. */
+  border-radius:5px; /* Set border-radius to 5px for the current selector. */
+  cursor:pointer; /* Set cursor to pointer for the current selector. */
+  accent-color:#1ed760 /* Set accent-color to #1ed760 for the current selector. */
+} /* Close the current CSS rule or media query. */
+input[type=range]:hover{ /* Start styling elements matched by input[type=range]:hover. */
+  background:#1ed760 /* Set background to #1ed760 for the current selector. */
+} /* Close the current CSS rule or media query. */
+input[type=range]::-webkit-slider-thumb{ /* Start styling elements matched by input[type=range]::-webkit-slider-thumb. */
+  appearance:none; /* Set appearance to none for the current selector. */
+  width:11px; /* Set width to 11px for the current selector. */
+  height:11px; /* Set height to 11px for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  background:#fff /* Set background to #fff for the current selector. */
+} /* Close the current CSS rule or media query. */
+.empty-state{ /* Start styling elements matched by .empty-state. */
+  text-align:center; /* Set text-align to center for the current selector. */
+  padding:50px 10px; /* Set padding to 50px 10px for the current selector. */
+  font-size:12px; /* Set font-size to 12px for the current selector. */
+  color:#b3b3b3 /* Set color to #b3b3b3 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.search-box{ /* Start styling elements matched by .search-box. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:10px; /* Set gap to 10px for the current selector. */
+  background:#242424; /* Set background to #242424 for the current selector. */
+  border-radius:25px; /* Set border-radius to 25px for the current selector. */
+  padding:0 16px; /* Set padding to 0 16px for the current selector. */
+  max-width:420px; /* Set max-width to 420px for the current selector. */
+  margin-bottom:20px /* Set margin-bottom to 20px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.search-box svg{ /* Start styling elements matched by .search-box svg. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  width:18px /* Set width to 18px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.search-box input{ /* Start styling elements matched by .search-box input. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:transparent; /* Set background to transparent for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  outline:0; /* Set outline to 0 for the current selector. */
+  width:100%; /* Set width to 100% for the current selector. */
+  height:43px; /* Set height to 43px for the current selector. */
+  font-size:12px /* Set font-size to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.search-box input::placeholder{ /* Start styling elements matched by .search-box input::placeholder. */
+  color:#a7a7a7 /* Set color to #a7a7a7 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-drawer{ /* Start styling elements matched by .queue-drawer. */
+  position:fixed; /* Set position to fixed for the current selector. */
+  right:8px; /* Set right to 8px for the current selector. */
+  bottom:96px; /* Set bottom to 96px for the current selector. */
+  width:290px; /* Set width to 290px for the current selector. */
+  max-height:min(500px,70vh); /* Set max-height to min(500px,70vh) for the current selector. */
+  overflow:auto; /* Set overflow to auto for the current selector. */
+  z-index:19; /* Set z-index to 19 for the current selector. */
+  box-shadow:0 10px 50px #000b; /* Set box-shadow to 0 10px 50px #000b for the current selector. */
+  padding:17px /* Set padding to 17px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-heading{ /* Start styling elements matched by .queue-heading. */
+  display:flex; /* Set display to flex for the current selector. */
+  justify-content:space-between; /* Set justify-content to space-between for the current selector. */
+  align-items:center /* Set align-items to center for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-heading h2{ /* Start styling elements matched by .queue-heading h2. */
+  font-size:17px; /* Set font-size to 17px for the current selector. */
+  margin:0 /* Set margin to 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-drawer>p{ /* Start styling elements matched by .queue-drawer>p. */
+  color:#b3b3b3; /* Set color to #b3b3b3 for the current selector. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  margin:20px 0 8px /* Set margin to 20px 0 8px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-item{ /* Start styling elements matched by .queue-item. */
+  border:0; /* Set border to 0 for the current selector. */
+  background:transparent; /* Set background to transparent for the current selector. */
+  width:100%; /* Set width to 100% for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:10px; /* Set gap to 10px for the current selector. */
+  text-align:left; /* Set text-align to left for the current selector. */
+  padding:7px 3px; /* Set padding to 7px 3px for the current selector. */
+  border-radius:4px /* Set border-radius to 4px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-item:hover{ /* Start styling elements matched by .queue-item:hover. */
+  background:#242424 /* Set background to #242424 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-item .row-art{ /* Start styling elements matched by .queue-item .row-art. */
+  width:39px; /* Set width to 39px for the current selector. */
+  height:39px /* Set height to 39px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-item strong,.queue-item small{ /* Start styling elements matched by .queue-item strong,.queue-item small. */
+  display:block /* Set display to block for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-item strong{ /* Start styling elements matched by .queue-item strong. */
+  font-size:12px /* Set font-size to 12px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.queue-item small{ /* Start styling elements matched by .queue-item small. */
+  color:#aaa; /* Set color to #aaa for the current selector. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  margin-top:3px /* Set margin-top to 3px for the current selector. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:1170px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .app-shell{ /* Start styling elements matched by .app-shell. */
+    grid-template-columns:250px minmax(0,1fr) /* Set grid-template-columns to 250px minmax(0,1fr) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .now-panel{ /* Start styling elements matched by .now-panel. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .app-shell.show-now{ /* Start styling elements matched by .app-shell.show-now. */
+    grid-template-columns:250px minmax(0,1fr) 250px /* Set grid-template-columns to 250px minmax(0,1fr) 250px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .app-shell.show-now .now-panel{ /* Start styling elements matched by .app-shell.show-now .now-panel. */
+    display:block /* Set display to block for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-grid{ /* Start styling elements matched by .featured-grid. */
+    grid-template-columns:repeat(3,minmax(0,1fr)) /* Set grid-template-columns to repeat(3,minmax(0,1fr)) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-card:nth-child(4){ /* Start styling elements matched by .featured-card:nth-child(4). */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:820px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .app-shell{ /* Start styling elements matched by .app-shell. */
+    grid-template-columns:72px minmax(0,1fr) /* Set grid-template-columns to 72px minmax(0,1fr) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .left-column{ /* Start styling elements matched by .left-column. */
+    gap:8px /* Set gap to 8px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .nav-panel{ /* Start styling elements matched by .nav-panel. */
+    padding:16px 6px /* Set padding to 16px 6px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .brand{ /* Start styling elements matched by .brand. */
+    justify-content:center; /* Set justify-content to center for the current selector. */
+    padding:0; /* Set padding to 0 for the current selector. */
+    margin:0 0 18px /* Set margin to 0 0 18px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .brand strong,.brand small,.nav-link span,.library-heading .plus-button,.library-filters,.library-search-line,.playlist-item>span:last-child,.library-help{ /* Start styling elements matched by .brand strong,.brand small,.nav-link span,.library-heading .plus-button,.library-filters,.library-search-line,.playlist-item>span:last-child,.library-help. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .nav-link{ /* Start styling elements matched by .nav-link. */
+    justify-content:center; /* Set justify-content to center for the current selector. */
+    padding:0 /* Set padding to 0 for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .library-panel{ /* Start styling elements matched by .library-panel. */
+    padding:10px 6px /* Set padding to 10px 6px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .library-title{ /* Start styling elements matched by .library-title. */
+    margin:0 auto /* Set margin to 0 auto for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .playlist-item{ /* Start styling elements matched by .playlist-item. */
+    justify-content:center /* Set justify-content to center for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .app-shell.show-now{ /* Start styling elements matched by .app-shell.show-now. */
+    grid-template-columns:72px minmax(0,1fr) /* Set grid-template-columns to 72px minmax(0,1fr) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .app-shell.show-now .now-panel{ /* Start styling elements matched by .app-shell.show-now .now-panel. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .quick-grid{ /* Start styling elements matched by .quick-grid. */
+    grid-template-columns:repeat(2,minmax(0,1fr)) /* Set grid-template-columns to repeat(2,minmax(0,1fr)) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .top-search{ /* Start styling elements matched by .top-search. */
+    min-width:0 /* Set min-width to 0 for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .top-search span,.app-badge{ /* Start styling elements matched by .top-search span,.app-badge. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-grid{ /* Start styling elements matched by .featured-grid. */
+    grid-template-columns:repeat(3,minmax(0,1fr)) /* Set grid-template-columns to repeat(3,minmax(0,1fr)) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player{ /* Start styling elements matched by .player. */
+    grid-template-columns:minmax(120px,1fr) minmax(230px,1.2fr) 70px /* Set grid-template-columns to minmax(120px,1fr) minmax(230px,1.2fr) 70px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-extras .volume-icon,.player-extras input{ /* Start styling elements matched by .player-extras .volume-icon,.player-extras input. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:560px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .app-shell{ /* Start styling elements matched by .app-shell. */
+    display:block; /* Set display to block for the current selector. */
+    height:calc(100vh - 138px); /* Set height to calc(100vh - 138px) for the current selector. */
+    padding:0 /* Set padding to 0 for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .left-column{ /* Start styling elements matched by .left-column. */
+    position:fixed; /* Set position to fixed for the current selector. */
+    bottom:0; /* Set bottom to 0 for the current selector. */
+    left:0; /* Set left to 0 for the current selector. */
+    right:0; /* Set right to 0 for the current selector. */
+    height:54px; /* Set height to 54px for the current selector. */
+    z-index:22; /* Set z-index to 22 for the current selector. */
+    background:#000; /* Set background to #000 for the current selector. */
+    display:block /* Set display to block for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .nav-panel{ /* Start styling elements matched by .nav-panel. */
+    height:54px; /* Set height to 54px for the current selector. */
+    padding:3px 5px; /* Set padding to 3px 5px for the current selector. */
+    background:#000 /* Set background to #000 for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .brand,.library-panel{ /* Start styling elements matched by .brand,.library-panel. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .primary-nav{ /* Start styling elements matched by .primary-nav. */
+    display:flex; /* Set display to flex for the current selector. */
+    justify-content:space-around; /* Set justify-content to space-around for the current selector. */
+    height:100% /* Set height to 100% for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .primary-nav .nav-link{ /* Start styling elements matched by .primary-nav .nav-link. */
+    display:flex; /* Set display to flex for the current selector. */
+    flex-direction:column; /* Set flex-direction to column for the current selector. */
+    gap:1px; /* Set gap to 1px for the current selector. */
+    width:50%; /* Set width to 50% for the current selector. */
+    height:48px; /* Set height to 48px for the current selector. */
+    font-size:10px /* Set font-size to 10px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .nav-link span{ /* Start styling elements matched by .nav-link span. */
+    display:block /* Set display to block for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .primary-nav .nav-link svg{ /* Start styling elements matched by .primary-nav .nav-link svg. */
+    width:20px; /* Set width to 20px for the current selector. */
+    height:20px /* Set height to 20px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .main-content{ /* Start styling elements matched by .main-content. */
+    height:calc(100vh - 138px); /* Set height to calc(100vh - 138px) for the current selector. */
+    border-radius:0 /* Set border-radius to 0 for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .topbar{ /* Start styling elements matched by .topbar. */
+    height:54px; /* Set height to 54px for the current selector. */
+    padding:0 15px /* Set padding to 0 15px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .main-scroll{ /* Start styling elements matched by .main-scroll. */
+    padding:0 15px 70px /* Set padding to 0 15px 70px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .welcome-line h1{ /* Start styling elements matched by .welcome-line h1. */
+    font-size:23px; /* Set font-size to 23px for the current selector. */
+    margin-bottom:15px /* Set margin-bottom to 15px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .quick-grid{ /* Start styling elements matched by .quick-grid. */
+    gap:7px; /* Set gap to 7px for the current selector. */
+    margin-bottom:27px /* Set margin-bottom to 27px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .quick-tile{ /* Start styling elements matched by .quick-tile. */
+    height:54px; /* Set height to 54px for the current selector. */
+    gap:7px /* Set gap to 7px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .quick-cover{ /* Start styling elements matched by .quick-cover. */
+    width:54px; /* Set width to 54px for the current selector. */
+    height:54px; /* Set height to 54px for the current selector. */
+    font-size:27px /* Set font-size to 27px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .quick-tile strong{ /* Start styling elements matched by .quick-tile strong. */
+    font-size:10px /* Set font-size to 10px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .quick-play{ /* Start styling elements matched by .quick-play. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-grid{ /* Start styling elements matched by .featured-grid. */
+    grid-template-columns:repeat(2,minmax(0,1fr)) /* Set grid-template-columns to repeat(2,minmax(0,1fr)) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-card:nth-child(4){ /* Start styling elements matched by .featured-card:nth-child(4). */
+    display:block /* Set display to block for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-card{ /* Start styling elements matched by .featured-card. */
+    padding:8px /* Set padding to 8px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-card strong{ /* Start styling elements matched by .featured-card strong. */
+    font-size:11px /* Set font-size to 11px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .featured-card small{ /* Start styling elements matched by .featured-card small. */
+    font-size:9px /* Set font-size to 9px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .card-shape{ /* Start styling elements matched by .card-shape. */
+    font-size:55px /* Set font-size to 55px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .track-head,.track-row{ /* Start styling elements matched by .track-head,.track-row. */
+    grid-template-columns:25px minmax(0,1fr) 40px 24px; /* Set grid-template-columns to 25px minmax(0,1fr) 40px 24px for the current selector. */
+    gap:6px /* Set gap to 6px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .track-head span:nth-child(3),.genre{ /* Start styling elements matched by .track-head span:nth-child(3),.genre. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .track-row{ /* Start styling elements matched by .track-row. */
+    padding:0 4px /* Set padding to 0 4px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .track-head{ /* Start styling elements matched by .track-head. */
+    padding:0 4px /* Set padding to 0 4px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .page-footer{ /* Start styling elements matched by .page-footer. */
+    display:block; /* Set display to block for the current selector. */
+    line-height:1.8 /* Set line-height to 1.8 for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .page-footer span{ /* Start styling elements matched by .page-footer span. */
+    display:block /* Set display to block for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player{ /* Start styling elements matched by .player. */
+    height:84px; /* Set height to 84px for the current selector. */
+    bottom:54px; /* Set bottom to 54px for the current selector. */
+    border-radius:7px; /* Set border-radius to 7px for the current selector. */
+    margin:0 6px; /* Set margin to 0 6px for the current selector. */
+    padding:6px 10px; /* Set padding to 6px 10px for the current selector. */
+    grid-template-columns:minmax(0,1fr) auto; /* Set grid-template-columns to minmax(0,1fr) auto for the current selector. */
+    background:#243629; /* Set background to #243629 for the current selector. */
+    gap:6px /* Set gap to 6px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-art{ /* Start styling elements matched by .player-art. */
+    width:43px; /* Set width to 43px for the current selector. */
+    height:43px; /* Set height to 43px for the current selector. */
+    font-size:25px /* Set font-size to 25px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-meta strong{ /* Start styling elements matched by .player-meta strong. */
+    font-size:11px /* Set font-size to 11px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-track .like-button{ /* Start styling elements matched by .player-track .like-button. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-center{ /* Start styling elements matched by .player-center. */
+    width:auto /* Set width to auto for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-buttons{ /* Start styling elements matched by .player-buttons. */
+    gap:6px /* Set gap to 6px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-buttons .control-small:not(#next){ /* Start styling elements matched by .player-buttons .control-small:not(#next). */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-buttons #next{ /* Start styling elements matched by .player-buttons #next. */
+    color:#fff /* Set color to #fff for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .player-buttons #next svg{ /* Start styling elements matched by .player-buttons #next svg. */
+    width:21px; /* Set width to 21px for the current selector. */
+    height:21px /* Set height to 21px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .control-play{ /* Start styling elements matched by .control-play. */
+    background:none; /* Set background to none for the current selector. */
+    color:#fff; /* Set color to #fff for the current selector. */
+    width:28px /* Set width to 28px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .control-play svg{ /* Start styling elements matched by .control-play svg. */
+    width:21px; /* Set width to 21px for the current selector. */
+    height:21px /* Set height to 21px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .timeline,.player-extras{ /* Start styling elements matched by .timeline,.player-extras. */
+    display:none /* Set display to none for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .queue-drawer{ /* Start styling elements matched by .queue-drawer. */
+    right:6px; /* Set right to 6px for the current selector. */
+    bottom:145px; /* Set bottom to 145px for the current selector. */
+    max-width:calc(100vw - 12px) /* Set max-width to calc(100vw - 12px) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .section-heading h2{ /* Start styling elements matched by .section-heading h2. */
+    font-size:19px /* Set font-size to 19px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+/* Small controls and layout states used by the plain-JavaScript interactions. */ /* Document the purpose of the styles that follow. */
+.mobile-library-link,#mobile-upload{ /* Start styling elements matched by .mobile-library-link,#mobile-upload. */
+  display:none /* Set display to none for the current selector. */
+} /* Close the current CSS rule or media query. */
+.app-shell.now-hidden{ /* Start styling elements matched by .app-shell.now-hidden. */
+  grid-template-columns:278px minmax(0,1fr) /* Set grid-template-columns to 278px minmax(0,1fr) for the current selector. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:1170px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .app-shell.now-hidden{ /* Start styling elements matched by .app-shell.now-hidden. */
+    grid-template-columns:250px minmax(0,1fr) /* Set grid-template-columns to 250px minmax(0,1fr) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:820px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .app-shell.now-hidden{ /* Start styling elements matched by .app-shell.now-hidden. */
+    grid-template-columns:72px minmax(0,1fr) /* Set grid-template-columns to 72px minmax(0,1fr) for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:560px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .mobile-library-link{ /* Start styling elements matched by .mobile-library-link. */
+    display:flex /* Set display to flex for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .primary-nav .nav-link{ /* Start styling elements matched by .primary-nav .nav-link. */
+    width:33.333% /* Set width to 33.333% for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  #mobile-upload{ /* Start styling elements matched by #mobile-upload. */
+    display:grid; /* Set display to grid for the current selector. */
+    width:32px; /* Set width to 32px for the current selector. */
+    height:32px; /* Set height to 32px for the current selector. */
+    border:0; /* Set border to 0 for the current selector. */
+    border-radius:50%; /* Set border-radius to 50% for the current selector. */
+    background:#242424; /* Set background to #242424 for the current selector. */
+    color:#fff; /* Set color to #fff for the current selector. */
+    place-items:center /* Set place-items to center for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  #mobile-upload svg{ /* Start styling elements matched by #mobile-upload svg. */
+    width:16px; /* Set width to 16px for the current selector. */
+    height:16px /* Set height to 16px for the current selector. */
+  } /* Close the current CSS rule or media query. */
+  .app-shell.now-hidden{ /* Start styling elements matched by .app-shell.now-hidden. */
+    display:block /* Set display to block for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+.page-footer a,.artist-card a{ /* Start styling elements matched by .page-footer a,.artist-card a. */
+  color:#d3e1d4; /* Set color to #d3e1d4 for the current selector. */
+  text-decoration:underline; /* Set text-decoration to underline for the current selector. */
+  text-underline-offset:2px /* Set text-underline-offset to 2px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-card a{ /* Start styling elements matched by .artist-card a. */
+  display:inline-block; /* Set display to inline-block for the current selector. */
+  font-size:10px; /* Set font-size to 10px for the current selector. */
+  line-height:1.4 /* Set line-height to 1.4 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-page{ /* Start styling elements matched by .credits-page. */
+  min-height:100vh; /* Set min-height to 100vh for the current selector. */
+  padding:28px; /* Set padding to 28px for the current selector. */
+  background:#0c0c0c /* Set background to #0c0c0c for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-card{ /* Start styling elements matched by .credits-card. */
+  max-width:650px; /* Set max-width to 650px for the current selector. */
+  margin:0 auto; /* Set margin to 0 auto for the current selector. */
+  padding:28px; /* Set padding to 28px for the current selector. */
+  background:#181818; /* Set background to #181818 for the current selector. */
+  border-radius:10px /* Set border-radius to 10px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-card h1{ /* Start styling elements matched by .credits-card h1. */
+  margin:24px 0 12px; /* Set margin to 24px 0 12px for the current selector. */
+  font-size:32px /* Set font-size to 32px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-card p,.credits-card li{ /* Start styling elements matched by .credits-card p,.credits-card li. */
+  color:#c5c5c5; /* Set color to #c5c5c5 for the current selector. */
+  font-size:14px; /* Set font-size to 14px for the current selector. */
+  line-height:1.7 /* Set line-height to 1.7 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-card ul{ /* Start styling elements matched by .credits-card ul. */
+  padding-left:20px /* Set padding-left to 20px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-card li{ /* Start styling elements matched by .credits-card li. */
+  padding:3px 0 /* Set padding to 3px 0 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-card a{ /* Start styling elements matched by .credits-card a. */
+  color:#1ed760; /* Set color to #1ed760 for the current selector. */
+  text-underline-offset:3px /* Set text-underline-offset to 3px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.credits-back{ /* Start styling elements matched by .credits-back. */
+  font-size:13px; /* Set font-size to 13px for the current selector. */
+  font-weight:800 /* Set font-weight to 800 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-embed-grid{ /* Start styling elements matched by .artist-embed-grid. */
+  display:grid; /* Set display to grid for the current selector. */
+  grid-template-columns:repeat(2,minmax(0,1fr)); /* Set grid-template-columns to repeat(2,minmax(0,1fr)) for the current selector. */
+  gap:16px; /* Set gap to 16px for the current selector. */
+  margin-top:18px /* Set margin-top to 18px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-embed-card{ /* Start styling elements matched by .artist-embed-card. */
+  min-width:0; /* Set min-width to 0 for the current selector. */
+  padding:14px; /* Set padding to 14px for the current selector. */
+  border-radius:10px; /* Set border-radius to 10px for the current selector. */
+  background:#202020 /* Set background to #202020 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-embed-card h3{ /* Start styling elements matched by .artist-embed-card h3. */
+  margin:0 0 12px; /* Set margin to 0 0 12px for the current selector. */
+  font-size:16px /* Set font-size to 16px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-embed-card a{ /* Start styling elements matched by .artist-embed-card a. */
+  display:inline-block; /* Set display to inline-block for the current selector. */
+  margin-top:12px; /* Set margin-top to 12px for the current selector. */
+  color:#1ed760; /* Set color to #1ed760 for the current selector. */
+  font-size:12px; /* Set font-size to 12px for the current selector. */
+  font-weight:700; /* Set font-weight to 700 for the current selector. */
+  text-underline-offset:3px /* Set text-underline-offset to 3px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-link-card{ /* Start styling elements matched by .artist-link-card. */
+  min-height:118px; /* Set min-height to 118px for the current selector. */
+  display:flex; /* Set display to flex for the current selector. */
+  align-items:center; /* Set align-items to center for the current selector. */
+  gap:16px; /* Set gap to 16px for the current selector. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  text-decoration:none; /* Set text-decoration to none for the current selector. */
+  transition:transform .18s,filter .18s /* Set transition to transform .18s,filter .18s for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-link-card:hover{ /* Start styling elements matched by .artist-link-card:hover. */
+  transform:translateY(-3px); /* Set transform to translateY(-3px) for the current selector. */
+  filter:brightness(1.12) /* Set filter to brightness(1.12) for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-link-card h3{ /* Start styling elements matched by .artist-link-card h3. */
+  margin:0 0 7px /* Set margin to 0 0 7px for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-link-card small{ /* Start styling elements matched by .artist-link-card small. */
+  color:#fff; /* Set color to #fff for the current selector. */
+  font-size:11px; /* Set font-size to 11px for the current selector. */
+  opacity:.85 /* Set opacity to .85 for the current selector. */
+} /* Close the current CSS rule or media query. */
+.artist-monogram{ /* Start styling elements matched by .artist-monogram. */
+  width:68px; /* Set width to 68px for the current selector. */
+  height:68px; /* Set height to 68px for the current selector. */
+  flex:none; /* Set flex to none for the current selector. */
+  display:grid; /* Set display to grid for the current selector. */
+  place-items:center; /* Set place-items to center for the current selector. */
+  border-radius:50%; /* Set border-radius to 50% for the current selector. */
+  background:#0005; /* Set background to #0005 for the current selector. */
+  border:1px solid #ffffff40; /* Set border to 1px solid #ffffff40 for the current selector. */
+  font-size:23px; /* Set font-size to 23px for the current selector. */
+  font-weight:800; /* Set font-weight to 800 for the current selector. */
+  box-shadow:0 8px 20px #0005 /* Set box-shadow to 0 8px 20px #0005 for the current selector. */
+} /* Close the current CSS rule or media query. */
+@media(max-width:760px){ /* Apply the enclosed styles only for this screen size or user preference. */
+  .artist-embed-grid{ /* Start styling elements matched by .artist-embed-grid. */
+    grid-template-columns:1fr /* Set grid-template-columns to 1fr for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */
+@media(prefers-reduced-motion:reduce){ /* Apply the enclosed styles only for this screen size or user preference. */
+  *,*::before,*::after{ /* Start styling elements matched by *,*::before,*::after. */
+    scroll-behavior:auto!important; /* Set scroll-behavior to auto!important for the current selector. */
+    transition-duration:.01ms!important; /* Set transition-duration to .01ms!important for the current selector. */
+    animation-duration:.01ms!important; /* Set animation-duration to .01ms!important for the current selector. */
+    animation-iteration-count:1!important /* Set animation-iteration-count to 1!important for the current selector. */
+  } /* Close the current CSS rule or media query. */
+} /* Close the current CSS rule or media query. */

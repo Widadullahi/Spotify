@@ -15,7 +15,15 @@ const musicTracks = [
 ].map(track=>({...track,artist:'Kevin MacLeod',audioUrl:musicBase+encodeURIComponent(track.file),sourceUrl:sourceBase+track.isrc}));
 const $ = (selector) => document.querySelector(selector);
 const audio = $('#audio');
-const state = {tracks:[...musicTracks],index:-1,view:'home',playlist:null,history:[{view:'home',playlist:null}],historyIndex:0,query:'',shuffle:false,repeat:false,liked:new Set(JSON.parse(localStorage.getItem('soundspace-likes') || '[]').filter(id=>musicTracks.some(track=>track.id===id)))};
+const savedLikes = (() => {
+  try {
+    const value = JSON.parse(localStorage.getItem('soundspace-likes') || '[]');
+    return Array.isArray(value) ? value : [];
+  } catch {
+    return [];
+  }
+})();
+const state = {tracks:[...musicTracks],index:-1,view:'home',playlist:null,history:[{view:'home',playlist:null}],historyIndex:0,query:'',shuffle:false,repeat:false,liked:new Set(savedLikes.filter(id=>musicTracks.some(track=>track.id===id)))};
 const playlists={chill:{title:'Late Night Vibes',genres:['Jazz','Reggae','Pop']},energy:{title:'Feel Good Mix',genres:['African','Disco','Latin','Rock']},focus:{title:'Deep Focus',genres:['Electronica','Funk','Jazz']}};
 const escapeHtml = (text) => String(text).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const timeLabel = seconds => Number.isFinite(seconds) ? `${Math.floor(seconds/60)}:${String(Math.floor(seconds%60)).padStart(2,'0')}` : '0:00';
@@ -38,7 +46,11 @@ function renderTracks(){
 function setView(view,playlist=null,record=true){
   state.view=view;state.playlist=playlist;state.query='';
   if(record){state.history=state.history.slice(0,state.historyIndex+1);state.history.push({view,playlist});state.historyIndex=state.history.length-1;}
-  document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));
+  document.querySelectorAll('[data-view]').forEach(button=>{
+    const isActive=button.dataset.view===view;
+    button.classList.toggle('active',isActive);
+    if(isActive)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+  });
   document.querySelectorAll('[data-playlist]').forEach(button=>button.classList.toggle('selected',view==='playlist'&&button.dataset.playlist===playlist));
   $('#hero').hidden=view!=='home';$('#featured-section').hidden=view!=='home';$('#artists-section').hidden=view!=='home';
   const headings={home:['YOUR DAILY MIX','Songs to play'],search:['SEARCH','Find your next song'],library:['LOCAL FILES','Your music'],liked:['PLAYLIST','Liked Songs'],playlist:['PLAYLIST',playlists[playlist]?.title||'Playlist']};
@@ -54,7 +66,12 @@ function setView(view,playlist=null,record=true){
     $('#search-input').focus();
   }
   renderTracks();
+  updateHistoryButtons();
   if(view!=='home')$('#tracks-section').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function updateHistoryButtons(){
+  $('#go-back').disabled=state.historyIndex===0;
+  $('#go-forward').disabled=state.historyIndex===state.history.length-1;
 }
 function updateNowPlaying(){
   const track=currentTrack();if(!track)return;
@@ -123,7 +140,10 @@ $('#upload-side').addEventListener('click',openUpload);$('#upload-main').addEven
 $('#mobile-upload').addEventListener('click',openUpload);
 $('#file-input').addEventListener('change',event=>{
   const files=[...event.target.files].filter(file=>file.type.startsWith('audio/'));
-  files.forEach(file=>state.tracks.push({id:`local-${crypto.randomUUID()}`,title:file.name.replace(/\.[^.]+$/,''),artist:'Your music',genre:'Local file',duration:0,art:'art-green',symbol:'♫',description:'A track you added from your device. It stays available until you close or reload this page.',local:true,url:URL.createObjectURL(file)}));
+  files.forEach(file=>{
+    const uniqueId=crypto.randomUUID?.()||`${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    state.tracks.push({id:`local-${uniqueId}`,title:file.name.replace(/\.[^.]+$/,''),artist:'Your music',genre:'Local file',duration:0,art:'art-green',symbol:'♫',description:'A track you added from your device. It stays available until you close or reload this page.',local:true,url:URL.createObjectURL(file)});
+  });
   event.target.value='';if(files.length)setView('library');
 });
 $('#featured-grid').addEventListener('click',event=>{const card=event.target.closest('[data-play]');if(card)playIndex(state.tracks.findIndex(track=>track.id===card.dataset.play));});
@@ -135,7 +155,7 @@ $('#now-like').addEventListener('click',()=>{if(currentTrack())toggleLike(curren
 $('#player-like').addEventListener('click',()=>{if(currentTrack())toggleLike(currentTrack().id)});
 $('#show-all').addEventListener('click',()=>setView('search'));
 $('#queue-toggle').addEventListener('click',()=>{$('#queue-drawer').hidden=!$('#queue-drawer').hidden;renderQueue()});
-$('#show-queue').addEventListener('click',()=>{$('#queue-drawer').hidden=false;renderQueue()});
+$('#show-queue').addEventListener('click',()=>{$('#queue-drawer').hidden=false;renderQueue();$('#close-queue').focus()});
 $('#close-queue').addEventListener('click',()=>{$('#queue-drawer').hidden=true});
 $('#queue-list').addEventListener('click',event=>{const row=event.target.closest('[data-queue]');if(row){playIndex(state.tracks.findIndex(track=>track.id===row.dataset.queue));$('#queue-drawer').hidden=true}});
 $('#close-now').addEventListener('click',()=>{const shell=$('.app-shell');shell.classList.remove('show-now');shell.classList.add('now-hidden');$('.now-panel').hidden=true});
@@ -153,6 +173,8 @@ audio.addEventListener('error',()=>{if(currentTrack())$('#now-description').text
 audio.addEventListener('timeupdate',()=>{$('#current-time').textContent=timeLabel(audio.currentTime);$('#seek').value=audio.duration?audio.currentTime/audio.duration*100:0});
 audio.addEventListener('ended',()=>{if(state.repeat){audio.currentTime=0;audio.play()}else nextTrack()});
 document.addEventListener('keydown',event=>{if(event.code==='Space'&&!['INPUT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName)){event.preventDefault();togglePlay()}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){$('#queue-drawer').hidden=true}});
+window.addEventListener('beforeunload',()=>state.tracks.filter(track=>track.local).forEach(track=>URL.revokeObjectURL(track.url)));
 audio.volume=.7;
 const hour=new Date().getHours();$('#greeting').textContent=hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';
-renderFeatured();renderTracks();renderQueue();
+renderFeatured();renderTracks();renderQueue();updateHistoryButtons();

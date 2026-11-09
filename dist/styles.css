@@ -321,6 +321,10 @@ svg{
 .history-buttons button:nth-child(2) svg{
   transform:rotate(180deg)
 }
+.history-buttons button:disabled{
+  cursor:not-allowed;
+  opacity:.35
+}
 .history-buttons svg{
   width:16px;
   height:16px
@@ -1405,13 +1409,6 @@ input[type=range]::-webkit-slider-thumb{
   margin:0 0 12px;
   font-size:16px
 }
-.artist-embed-card iframe{
-  display:block;
-  width:100%;
-  border:0;
-  border-radius:12px;
-  background:#121212
-}
 .artist-embed-card a{
   display:inline-block;
   margin-top:12px;
@@ -1420,8 +1417,50 @@ input[type=range]::-webkit-slider-thumb{
   font-weight:700;
   text-underline-offset:3px
 }
+.artist-link-card{
+  min-height:118px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  color:#fff;
+  text-decoration:none;
+  transition:transform .18s,filter .18s
+}
+.artist-link-card:hover{
+  transform:translateY(-3px);
+  filter:brightness(1.12)
+}
+.artist-link-card h3{
+  margin:0 0 7px
+}
+.artist-link-card small{
+  color:#fff;
+  font-size:11px;
+  opacity:.85
+}
+.artist-monogram{
+  width:68px;
+  height:68px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0005;
+  border:1px solid #ffffff40;
+  font-size:23px;
+  font-weight:800;
+  box-shadow:0 8px 20px #0005
+}
 @media(max-width:760px){
   .artist-embed-grid{
     grid-template-columns:1fr
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important
   }
 }

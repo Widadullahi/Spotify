@@ -1,0 +1,4 @@
+{ // Start the hosting configuration object.
+  "project_id": "appgprj_6ae8690f5dac8191abf3054c72eecabf", // Identify the hosted application project.
+  "static": {"directory": "dist"} // Tell the host to publish the static files inside the dist folder.
+} // End the hosting configuration object.
